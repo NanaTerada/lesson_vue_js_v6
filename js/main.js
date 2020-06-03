@@ -11,14 +11,16 @@ var vm = new Vue({
         'task3',
     ]
     },
-    methods: {
-        // addItem: function(e) {
-        //     e.preventDefault();
-        //     this.todos.push(this.newItem);
-        // }
+    methods: { 
         addItem: function() {
             this.todos.push(this.newItem);
+        },
+        deletItem: function(index){
+            if(confirm('are you sure')){
+                this.todos.splice(index,1);
+            } 
         }
+
     }
     });
 })();
