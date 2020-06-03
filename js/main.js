@@ -1,4 +1,10 @@
 (function() {
-'use strict';
+  'use strict';
 
+var vm = new Vue({
+    el: '#app',
+    data: {
+    name: 'taguchi'
+    }
+    });
 })();
