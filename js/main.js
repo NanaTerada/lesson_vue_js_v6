@@ -6,14 +6,26 @@ var vm = new Vue({
     data: {
         newItem:'',
     todos:[
-        'task1',
-        'task2',
-        'task3',
+        {
+            title:'task 1',
+            isDone:false
+        },{
+            title:'task 2',
+            isDone:false
+        },{
+            title:'task 3',
+            isDone:true
+
+        }
     ]
     },
     methods: { 
         addItem: function() {
-            this.todos.push(this.newItem);
+            var item =  {
+                title:this.newItem,
+                isDone:false
+            };
+            this.todos.push(item);
         },
         deletItem: function(index){
             if(confirm('are you sure')){

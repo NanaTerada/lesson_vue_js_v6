@@ -11,7 +11,7 @@
             <h1>My Todos</h1>
           <ul>
                 <!-- 繰り返し処理にする -->
-              <li v-for="(todo,index) in todos">{{ todo }}
+              <li v-for="(todo,index) in todos">{{ todo.title }}
                   <span @click="deletItem(index)" class="command">[×]</span>
               </li>
           </ul>
